@@ -1209,7 +1209,7 @@ def updateOnlyHook(label=None, i=0, n=0, showWhenChanged=True):
 	qApp.unlock()
 
 
-def gui_ask_if_install(match):
+def gui_ask_if_install(match, goboPrograms=None):
 	p,v,r,t,u=match
 	global widget
 	resp = QMessageBox.warning(widget, 'Dependencies checking', "Install %s %s %s or skip this dependency?"%
