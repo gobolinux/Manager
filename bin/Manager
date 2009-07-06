@@ -1123,6 +1123,9 @@ class ManagerUIImpl(ManagerUI):
 		r.start()
 
 	def commandFinished(self, aborted, logger, cmd, runningModule):
+		if self.loggers.abortAllOrdered:
+			self.queueToggleRunningAction.setOn(False)
+
 		if aborted or self.commandsQueue.count() == 0:
 			if aborted:
 				self.commandsQueue.insertItem(cmd)
