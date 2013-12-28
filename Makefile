@@ -5,7 +5,7 @@
  # $* the prefix shared by target and dependent files.
 
 GUI_DIR=GUI
-LIB_DIR=lib/python2.3/site-packages
+LIB_DIR=lib/python2.7/site-packages
 BIN_DIR=bin
 
 all: guis libs
