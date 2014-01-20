@@ -13,14 +13,14 @@ all: guis libs
 guis : $(LIB_DIR)/ManagerUI.py $(LIB_DIR)/ManagerConfigForm.py $(LIB_DIR)/GenericEditor.py
 
 $(LIB_DIR)/GenericEditor.py: $(GUI_DIR)/GenericEditor.ui
-	pyuic $? >$@
+	pyuic4 $? >$@
 
 $(LIB_DIR)/ManagerUI.py: $(GUI_DIR)/ManagerUI.ui
 	mkdir -p $(LIB_DIR)
-	pyuic $? > $@
+	pyuic4 $? > $@
 
 $(LIB_DIR)/ManagerConfigForm.py: $(GUI_DIR)/ManagerConfigForm.ui
-	pyuic $? > $@
+	pyuic4 $? > $@
 
 
 libs : $(LIB_DIR)/GetInstalled.py $(LIB_DIR)/ManagerRunner.py compilation
